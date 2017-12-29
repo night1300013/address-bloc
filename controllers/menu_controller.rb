@@ -111,11 +111,12 @@ class MenuController
   def view_entry_number
     print "Enter the entry number: "
     number = gets.chomp.to_i
-    if address_book.entries[number-1] == nil
+    index = number - 1
+    if address_book.entries[index] == nil
       puts "Sorry, that is not a valid input"
       view_entry_number
     else
-      puts address_book.entries[number-1].to_s
+      puts address_book.entries[index].to_s
     end
   end
 end
