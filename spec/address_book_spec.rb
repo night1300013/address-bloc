@@ -54,9 +54,9 @@ RSpec.describe AddressBook do
       new_entry = book.entries[0]
 
       expect(book.entries.size).to eq(1)
-      expect(new_entry.name).to eq('Ada Lovelace')
-      expect(new_entry.phone_number).to eq('010.012.1815')
-      expect(new_entry.email).to eq('augusta.king@lovelace.com')
+      expect(new_entry.name).to_not eq('Ada Lovelace2')
+      expect(new_entry.phone_number).to_not eq('010.012.1816')
+      expect(new_entry.email).to_not eq('august2.king@lovelace.com')
     end
   end
 end
